@@ -3,7 +3,7 @@ package bdulp.Modelo;
 import java.time.LocalDate;
 
 public class Alumno {
-    
+
     private int id = -1;
     private String nombre; //Varchar
     private String apellido; //Varchar
@@ -12,6 +12,15 @@ public class Alumno {
     private boolean estado; //tinyint
 
     public Alumno(String nombre, String apellido, int dni, LocalDate fecha_nacimiento, boolean estado) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.fecha_nacimiento = fecha_nacimiento;
+        this.estado = estado;
+    }
+
+    public Alumno(int id, String nombre, String apellido, int dni, LocalDate fecha_nacimiento, boolean estado) {
+        this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -69,6 +78,5 @@ public class Alumno {
     public void setDni(int dni) {
         this.dni = dni;
     }
-    
-        
+
 }
